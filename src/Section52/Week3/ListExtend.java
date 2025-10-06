@@ -24,38 +24,12 @@ public class ListExtend {
     }
 
     //Other Methods
-    //Return the total number of characters in the list
-    public int charCount(){
-        int chCount = 0;
-        for(int i = 0; i < size; i++){
-            chCount += data[i].length();
-        }
-        return chCount;
-    }
-
-    //Return a string with the first character of each element
-    public String firstLetters(){
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < size; i++){
-            sb.append(data[i].charAt(0));
-        }
-
-        return sb.toString();
-    }
-
-    public boolean isEmpty(){
-        return size == 0;
-//        if(size == 0){
-//            return true;
-//        } else{
-//            return false;
-//        }
-    }
+    public boolean isEmpty(){ return size == 0;}
 
     //Add a new item at the end of the list
     public void append(String s){
         if(size < data.length) {
-            data[size++] = s;
+            data[size++] = s; // incremeant and pass
         } else{
             System.out.println("List is full");
         }
